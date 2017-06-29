@@ -120,3 +120,29 @@ function printTriangle(tiers) {
 }
 
 printTriangle(5);
+
+// 12 change printTriangle to pyramid
+
+function indent (x) {
+  let string = '';
+  for (let i = 0; i < x; i++) {
+    string = string + ' ';
+  }
+  return string;
+}
+
+function stars (x) {
+  let string = '';
+  for (let i = 0; i < x; i++) {
+    string = string + ' *';
+  }
+  return string;
+}
+
+function printPyramid (tiers) {
+  for (var i = 1; i < tiers; i++) { // start at 1 so we log 1 star the first time
+    console.log(indent(tiers - i) + stars(i));
+  }
+}
+
+printPyramid(10);
